@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    > img {
+        width: 64px;
+        height: 64px;
+    }
+
+    > div {
+        display: flex;
+        gap: 80px;
+    }
+}
+
+nav {
+    display: flex;
+    gap: 36px;
+
+    > a {
+        display: inline-block;
+        white-space: nowrap;
+        min-width: 120px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+}
