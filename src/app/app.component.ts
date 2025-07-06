@@ -6,11 +6,10 @@ import { MainContentComponent } from "./main-content/main-content.component";
 import { CircleComponent } from './shared/circle/circle.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, MainContentComponent, CircleComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [CommonModule, HeaderComponent, FooterComponent, MainContentComponent, CircleComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';
