@@ -18,6 +18,8 @@ export class Header {
   /** The currently active language code (e.g., 'en', 'de').  */
   currentLang: string = 'en';
 
+  showMenu: boolean = false;
+
   /**
    * Initializes the Header component and sets the current language
    * based on the TranslateService.
@@ -36,5 +38,15 @@ export class Header {
   switchLanguage(lang: string) {
     this.translate.use(lang);
     this.currentLang = lang;
+  }
+
+  openMenu() {
+    this.showMenu = !this.showMenu;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeMenu() {
+    this.showMenu = false;
+    document.body.style.overflow = '';
   }
 }

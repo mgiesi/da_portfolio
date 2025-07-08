@@ -5,5 +5,7 @@
     "header.aboutme": "About me",
     "header.skills": "Skills",
     "header.portfolio": "Portfolio",
-    "header.alt.logo": "Logo of Markus Giesinger's Portfolio"
+    "header.alt.logo": "Logo of Markus Giesinger's Portfolio",
+    "header.alt.burger": "Menu",
+    "header.alt.close": "Close menu"
 }
