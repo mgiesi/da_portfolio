@@ -25,11 +25,9 @@
         background-color: white;
         color: $color_primary2;
     }
-}
 
-.btn-style3-selected {
-    border-radius: 10px;
-    border: 1px solid $color_primary1;
-    color: white;
-    background-color: $color_primary1;
+    &.selected {
+        color: white;
+        background-color: $color_primary1;
+    }
 }
