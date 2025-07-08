@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "localize": ["en-US"],
             "browser": "src/main.ts",
             "polyfills": [

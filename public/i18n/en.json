@@ -1,4 +1,9 @@
 {
     "TITLE": "Hello!",
-    "MESSAGE": "It's me, Markus Giesinger."
+    "MESSAGE": "It's me, Markus Giesinger.",
+
+    "header.aboutme": "About me",
+    "header.skills": "Skills",
+    "header.portfolio": "Portfolio",
+    "header.alt.logo": "Logo of Markus Giesinger's Portfolio"
 }
