@@ -31,3 +31,21 @@
         background-color: $color_primary1;
     }
 }
+
+.btn-style4 {
+    color: white;
+    
+    &:hover {
+        color: $color_primary2;
+    }
+
+    &:active {
+        color: $color_primary2;
+        font-weight: 600;
+    }
+
+    &.selected {
+        color: $color_primary1;
+        font-weight: 600;
+    }
+}

@@ -7,5 +7,10 @@
     "header.portfolio": "Portfolio",
     "header.alt.logo": "Logo of Markus Giesinger's Portfolio",
     "header.alt.burger": "Menu",
-    "header.alt.close": "Close menu"
+    "header.alt.close": "Close menu",
+    
+    "footer.legalnotice": "Legal Notice",
+    "footer.alt.github": "Github",
+    "footer.alt.contact": "Contact",
+    "footer.alt.linkedin": "LinkedIn"
 }

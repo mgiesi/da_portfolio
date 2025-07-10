@@ -16,12 +16,12 @@ header {
 .logo {
     width: 150px;
     margin-left: 100px;
+    z-index: 999;
 }
 
 nav {
     > a {
         font-size: 23px;
-        font-weight: 400;
         color: white;
         transition: color 150ms;
 
@@ -56,7 +56,6 @@ nav {
             cursor: pointer;
 
             font-size: 18px;
-            font-weight: 400;
 
             width: 38px;
             height: 32px;
@@ -74,6 +73,12 @@ nav {
     align-items: center;
     
     margin-right: 76px;
+
+    > img {
+        z-index: 999;
+        transition: all 0.1s ease;
+        cursor: pointer;
+    }
 }
 
 .overlay-menu {
@@ -108,10 +113,46 @@ nav {
     height: 109px;
 }
 
-.overlay-close {
-    width: 30px;
-    
-    margin-right: 76px;
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 29px;
+
+    > nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 29px;
+    }
+
+    > div  {
+        display: flex;
+        gap: 14px;
+
+        > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            font-size: 23px;
+
+            text-align: center;
+            
+            transition: all 150ms;
+        }
+
+        > span {
+            color: white;
+            font-size: 23px;
+            font-weight: 400;
+        }
+    }
 }
 
 @media (max-width: 900px) {

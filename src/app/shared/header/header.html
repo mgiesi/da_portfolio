@@ -12,21 +12,22 @@
         </div>
     </div>
     <div class="header-nav-container-mobile">
-        <img (click)="openMenu()" class="burger" src="/icons/burger.svg" alt="{{'header.alt.burger' | translate}}">
+        <img (click)="toggleMenu()" [src]="iconMenu" alt="{{'header.alt.burger' | translate}}">
     </div>
     <div class="overlay-menu" [class.open]="showMenu" [class.close]="!showMenu">
         <div class="overlay-header">
-            <img class="logo" src="/icons/logo.svg" alt="{{'header.alt.logo' | translate }}">
-            <img class="overlay-close" (click)="closeMenu()" src="/icons/close.svg" alt="{{'header.alt.close' | translate}}">
         </div>
-        <nav>
-            <a class="btn-style1" href=".">{{'header.aboutme'  | translate }}</a>
-            <a class="btn-style1" href=".">{{'header.skills'  | translate }}</a>
-            <a class="btn-style1" href=".">{{'header.portfolio'  | translate }}</a>
-        </nav>
-        <div class="lang">
-            <a (click)="switchLanguage('de')" [class.selected]="currentLang === 'de'" class="btn-style3">DE</a>
-            <a (click)="switchLanguage('en')" [class.selected]="currentLang === 'en'" class="btn-style3">EN</a>
+        <div class="overlay-content">
+            <nav>
+                <a class="btn-style1" href=".">{{'header.aboutme'  | translate }}</a>
+                <a class="btn-style1" href=".">{{'header.skills'  | translate }}</a>
+                <a class="btn-style1" href=".">{{'header.portfolio'  | translate }}</a>
+            </nav>
+            <div class="lang">
+                <a (click)="switchLanguage('de')" [class.selected]="currentLang === 'de'" class="btn-style4">DE</a>
+                <span>/</span>
+                <a (click)="switchLanguage('en')" [class.selected]="currentLang === 'en'" class="btn-style4">EN</a>
+            </div>
         </div>
     </div>
 </header>
