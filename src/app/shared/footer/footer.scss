@@ -23,12 +23,16 @@ a {
     font-weight: 400;
 }
 
+.mobile-only {
+    display: none;
+}
+
 .footer-content-1 {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
 
-    > img {
+    >img {
         width: 216px;
         margin-bottom: 5px;
     }
@@ -39,11 +43,48 @@ a {
     gap: 42px;
     margin-right: 100px;
 
-    > img {
+    >img {
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+
         &:hover {
             transform: scale(1.4);
         }
     }
+}
+
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 380px;
+    }
+
+    .mobile-only {
+        display: inherit;
+    }
+
+    .footer-content-1 {
+        margin-left: 0;
+        margin-top: 66px;
+        margin-bottom: 54px;
+
+        >img {
+            width: 216px;
+        }
+
+        >a {
+            display: none;
+        }
+    }
+
+    .footer-content-3 {
+        display: flex;
+        gap: 42px;
+        margin-right: 0;
+        margin-top: 23px;
+        margin-bottom: 23px;
+    }
+
+    
 }
