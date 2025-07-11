@@ -21,6 +21,18 @@ a {
     color: white;
     font-size: 16px;
     font-weight: 400;
+
+    &:hover .line {
+        border-bottom: 2px solid $color_primary1;
+    }
+}
+
+.line {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    transition: all 0.2s ease-in-out;
 }
 
 .mobile-only {
@@ -31,10 +43,19 @@ a {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
+}
 
-    >img {
-        width: 216px;
-        margin-bottom: 5px;
+.logo {
+    width: 216px;
+    margin-bottom: 5px;
+}
+
+.link {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.4);
     }
 }
 
@@ -42,15 +63,6 @@ a {
     display: flex;
     gap: 42px;
     margin-right: 100px;
-
-    >img {
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-            transform: scale(1.4);
-        }
-    }
 }
 
 @media (max-width: 900px) {
@@ -64,6 +76,10 @@ a {
         display: inherit;
     }
 
+    .desktop-only {
+        display: none;
+    }
+
     .footer-content-1 {
         margin-left: 0;
         margin-top: 66px;
@@ -71,10 +87,6 @@ a {
 
         >img {
             width: 216px;
-        }
-
-        >a {
-            display: none;
         }
     }
 
@@ -86,5 +98,5 @@ a {
         margin-bottom: 23px;
     }
 
-    
+
 }

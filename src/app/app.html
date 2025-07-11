@@ -1,15 +1,7 @@
 <div class="fullWidthContainer">
   <app-header></app-header>
   <div class="mainContentContainer content-container">
-    <div class="sec1" style="height: 2000px">
-      <h1>{{ 'TITLE' | translate }}</h1>
-      <p>{{ 'MESSAGE' | translate }}</p>
-      <img src="/favicon.ico" alt="Bild von Markus Giesinger">
-      <p></p>
-
-      <button (click)="switchLang('en')">English</button>
-      <button (click)="switchLang('de')">Deutsch</button>
-    </div>
+    <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
 </div>
