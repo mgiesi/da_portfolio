@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+h4 {
+    color: white;
+}
+
+p {
+    color: white;
+    margin: 5px 0;
+}
+
+a {
+    color: white;
+    transition: color 150ms;
+
+    &:hover {
+        color: $color_primary1;
+    }
+}

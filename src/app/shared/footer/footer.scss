@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'containers';
 @import 'components';
 
 footer {
@@ -9,6 +10,7 @@ footer {
     align-items: center;
 
     background-color: $color_bg;
+    border-top: 4px solid $color_primary1;
 }
 
 span {
