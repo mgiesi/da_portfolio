@@ -5,25 +5,37 @@
 }
 
 .background-images {
-    position: relative;
+    position: absolute;
+    //left: 50%;
+    //transform: translateX(-50%);
     width: 100%;
     height: auto;
+    z-index: 0;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
 img {
-    position: position;   
+    position: absolute;   
     max-width: 100%;
     height: auto;
     pointer-events: none;
 }
 
-.img1 {
-    top: 379px;
+.img-herobg {
+    top: 380px;
     width: 1440px;
 }
 
-.img2 {
-    top: 221px;
+.img-photoshadow {
+    top: 140px;
     left: 12px;
     width: 671px;
 }

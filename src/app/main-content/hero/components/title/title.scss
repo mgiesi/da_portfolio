@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-indent: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical {
+    color: white;
+    writing-mode: tb-rl;
+    transform: scale(-1);
+    text-align: justify;
+    font-size: 52px;
+    text-align-last: justify;
+    white-space: nowrap;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+.title {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    vertical-align: top;
+}
+
+.subtitle {
+    color: $color_primary2;
+    font-size: 40px;
+    text-transform: uppercase;
+}

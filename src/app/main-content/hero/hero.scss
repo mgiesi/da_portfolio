@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+img {
+    position: block;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 80px;
+}
+
+.title {
+    position: absolute;
+    right: 40px;
+    top: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
