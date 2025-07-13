@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 /**
  * Header component that allows the user to switch between different languages.
@@ -9,7 +10,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
  */
 @Component({
   selector: 'app-header',
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })

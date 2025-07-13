@@ -3,8 +3,16 @@
 @import 'components';
 
 section {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
+    margin: 50px 0;
+    margin-left: 100px;
+
+    > div {
+        display: flex;
+    }
 }
 
 p  {
@@ -12,6 +20,45 @@ p  {
     color: white;
 }
 
+.aboutme-box {
+
+    > p {
+        margin-top: 40px;
+        margin-bottom: 32px;
+    }
+}
+
 .infobox {
     display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    > img {
+        margin-right: 20px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.25);
+            
+        }
+    }
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.img-me {
+    border-radius: 50%;
+    border: 4px solid $color_primary1;
+    background-color: $color_bg;
+}
+
+.line {
+    height: 4px;
+    background-color: $color_primary1;
+    width: 100%;
+    min-width: 200px;
 }
