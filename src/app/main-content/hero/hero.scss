@@ -8,11 +8,18 @@ section {
     min-height: 100vh;
 }
 
-img {
+.hero-me {
     position: block;
     top: 20px;
     left: 20px;
     margin-bottom: 80px;
+}
+
+.hero-bg {
+    position: absolute;
+    left: 0px;
+    top: 280px;
+    max-width: 100%;
 }
 
 .title {
@@ -25,4 +32,28 @@ img {
     position: absolute;
     bottom: 20px;
     left: 0;
+}
+
+.letstalk {
+    position: absolute;
+    right: 260px;
+    top: 320px;
+    padding: 15px 30px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.scrolldown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    right: 76px;
+
+    > span {
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+        writing-mode: tb-rl;
+    }
 }

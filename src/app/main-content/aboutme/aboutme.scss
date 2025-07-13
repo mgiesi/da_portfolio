@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+p  {
+    font-size: 16px;
+    color: white;
+}
+
+.infobox {
+    display: flex;
+}

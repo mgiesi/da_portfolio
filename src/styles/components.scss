@@ -1,11 +1,26 @@
 .btn-style1 {
+    border-radius: 10px;
+    background-color: $color_primary1;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
+    &:hover {
+        background-color: $color_primary2;
+        transform: scale(1.05);
+    }
+    
+    &:active {
+        background-color: white;
+        color: black;
+    }
 }
 
 .btn-style2 {
     border-radius: 10px;
     border: 1px solid $color_primary1;
     color: white;
+    cursor: pointer;
     
     &:hover {
         background-color: $color_primary1;
@@ -16,6 +31,7 @@
     border-radius: 10px;
     border: 1px solid $color_primary1;
     color: white;
+    cursor: pointer;
     
     &:hover {
         background-color: $color_primary2;
