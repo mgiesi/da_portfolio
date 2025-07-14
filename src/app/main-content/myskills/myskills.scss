@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+section {
+    display: flex;
+    margin: 50px 0;
+    margin-left: 100px;
+    margin-right: 70px;
+
+    >div {
+        display: flex;
+    }
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: white;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+td {
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+span {
+    color: $color_primary2;
+}
+
+.filter-color {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(1559%) hue-rotate(254deg) brightness(93%) contrast(101%);
+    transition: filter 0.2s ease-in-out;
+
+    &:hover {
+        filter: none;
+    }
+}
+
+.line {
+    height: 4px;
+    background-color: $color_primary2;
+    width: 100%;
+    min-width: 100px;
+}
+
+.skills-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    align-self: flex-end;
+    padding: 15px 30px;
+    margin-top: 40px;
+}

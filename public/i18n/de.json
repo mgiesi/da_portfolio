@@ -12,5 +12,20 @@
     "footer.legalnotice": "Impressum",
     "footer.alt.github": "Github",
     "footer.alt.contact": "Kontakt",
-    "footer.alt.linkedin": "LinkedIn"
+    "footer.alt.linkedin": "LinkedIn",
+
+    "skills.myskills": "Meine Stärken",
+    "skills.angular": "Angular",
+    "skills.api": "REST-API",
+    "skills.continuallylearning": "Continually Learning",
+    "skills.css": "CSS",
+    "skills.firebase": "Firebase",
+    "skills.git": "Git",
+    "skills.html": "HTML",
+    "skills.javascript": "JavaScript",
+    "skills.materialdesign": "Material Design",
+    "skills.scrum": "Scrum",
+    "skills.typescript": "TypeScript",
+    "skills.vues": "Vue.js",
+    "skills.wordpress": "WordPress"
 }

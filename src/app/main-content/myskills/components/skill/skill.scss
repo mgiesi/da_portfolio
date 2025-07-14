@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 88px;
+}
+
+img {
+    &:hover {
+        animation: pop 0.8s ease-out forwards;
+    }   
+}
+
+span {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+@keyframes pop {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-18px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
