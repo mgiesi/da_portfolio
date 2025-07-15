@@ -24,8 +24,9 @@
     "skills.html": "HTML",
     "skills.javascript": "JavaScript",
     "skills.materialdesign": "Material Design",
+    "skills.react": "React",
     "skills.scrum": "Scrum",
     "skills.typescript": "TypeScript",
-    "skills.vues": "Vue.js",
+    "skills.vuejs": "Vue.js",
     "skills.wordpress": "WordPress"
 }
