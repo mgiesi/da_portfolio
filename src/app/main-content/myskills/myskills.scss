@@ -48,8 +48,13 @@ span {
 .line {
     height: 4px;
     background-color: $color_primary2;
-    width: 100%;
+    width: 20%;
     min-width: 100px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .skills-info-container {

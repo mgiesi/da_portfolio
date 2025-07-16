@@ -1,13 +1,15 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
 .content {
-    max-width: 1200px;
+    max-width: $max_container_width;
     position: relative;
     overflow: hidden;
 }
 
 .background-images {
     position: absolute;
-    //left: 50%;
-    //transform: translateX(-50%);
     width: 100%;
     height: auto;
     z-index: 0;
@@ -17,7 +19,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 1200px;
+    max-width: $max_container_width;
     margin: 0 auto;
     z-index: 1;
 }
@@ -33,6 +35,31 @@ img {
     top: 70px;
     left: -42px;
     width: 671px;
+}
+
+.hero-me {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 80px;
+    width: 40vw;
+    max-width: 550px;
+    min-width: 380px;
+    height: auto;
+}
+
+.hero-bg-container {
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+
+    > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }
 
 .img3 {
@@ -57,4 +84,26 @@ img {
     top: 2221px;
     left: 12px;
     width: 671px;
+}
+
+@media (max-width: 900px) {
+    .hero-me {
+        min-width: 360px;
+        width: 60vw;
+    }
+    
+    .hero-bg-container {
+        width: 140%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-me {
+        min-width: 320px;
+    }
+    
+    .hero-bg-container {
+        width: 140%;
+    }
+
 }

@@ -18,22 +18,90 @@ td {
     writing-mode: tb-rl;
     transform: scale(-1);
     text-align: justify;
-    font-size: 52px;
+    font-size: 64px;
     text-align-last: justify;
     white-space: nowrap;
-    padding-top: 12px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    transition: all 0.2s ease-in-out;
 }
 
 .title {
     color: white;
-    font-size: 60px;
+    font-size: 76px;
     font-weight: 700;
     vertical-align: top;
+    transition: font-size 0.2s ease-in-out;
 }
 
 .subtitle {
     color: $color_primary2;
-    font-size: 40px;
+    font-size: 58px;
     text-transform: uppercase;
+    transition: font-size 0.2s ease-in-out;
+}
+
+
+@media (max-width: 1380px) {
+    .vertical {
+        font-size: 58px;
+        padding-top: 18px;
+        padding-bottom: 22px;
+    }
+
+    .title {
+        font-size: 66px;
+    }
+
+    .subtitle {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .vertical {
+        font-size: 50px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+
+    .title {
+        font-size: 56px;
+    }
+
+    .subtitle {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .vertical {
+        font-size: 42px;
+        padding-top: 14px;
+        padding-bottom: 16px;
+    }
+
+    .title {
+        font-size: 46px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .vertical {
+        font-size: 34px;
+        padding-top: 12px;
+        padding-bottom: 14px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 34px;
+    }
 }

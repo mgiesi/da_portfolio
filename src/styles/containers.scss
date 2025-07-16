@@ -1,10 +1,11 @@
 .fullWidthContainer {
     width: 100%;
-    background: $color_bg;
+    background: black;
 }
 
 .mainContentContainer {
     min-height: 100vh;
+    background: $color_bg;
 }
 
 .page-container {

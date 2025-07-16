@@ -3,7 +3,7 @@
 @import 'components';
 
 footer {
-    height: 291px;
+    height: $footer_height;
 
     display: flex;
     justify-content: space-between;
