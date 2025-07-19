@@ -19,9 +19,9 @@
         </div>
         <div class="overlay-content">
             <nav>
-                <a class="btn-style1" href=".">{{'header.aboutme'  | translate }}</a>
-                <a class="btn-style1" href=".">{{'header.skills'  | translate }}</a>
-                <a class="btn-style1" href=".">{{'header.portfolio'  | translate }}</a>
+                <a (click)="toggleMenu()" class="btn-style4" [routerLink]="[]" fragment="aboutme">{{'header.aboutme'  | translate }}</a>
+                <a (click)="toggleMenu()" class="btn-style4" [routerLink]="[]" fragment="skills">{{'header.skills'  | translate }}</a>
+                <a (click)="toggleMenu()" class="btn-style4" href=".">{{'header.portfolio'  | translate }}</a>
             </nav>
             <div class="lang">
                 <a (click)="switchLanguage('de')" [class.selected]="currentLang === 'de'" class="btn-style4">DE</a>

@@ -8,6 +8,11 @@ section {
     min-height: calc(100vh - $header_height);
 }
 
+.hero-me-placeholder {
+    display: none;
+    height: auto;
+}
+
 .title {
     position: absolute;
     right: 70px;
@@ -83,9 +88,15 @@ section {
     section {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        //justify-content: flex-end;
         align-items: flex-end;
         gap: 24px;
+    }
+
+    .hero-me-placeholder {
+        display: block;
+        min-width: 360px;
+        width: 60vw;
     }
 
     .title {
@@ -110,5 +121,12 @@ section {
 
     .scrolldown {
         display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .hero-me-placeholder {
+        min-width: 280px;
     }
 }

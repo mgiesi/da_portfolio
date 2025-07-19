@@ -100,10 +100,32 @@ img {
 @media (max-width: 600px) {
     .hero-me {
         min-width: 320px;
+        margin-left: 40px;
     }
     
     .hero-bg-container {
         width: 140%;
     }
+}
 
+@media (max-width: 570px) {
+    .hero-me {
+        min-width: 320px;
+        margin-left: 30px;
+    }
+    
+    .hero-bg-container {
+        width: 130%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-me {
+        min-width: 280px;
+        margin-left: 30px;
+    }
+
+    .hero-bg-container {
+        width: 115%;
+    }
 }

@@ -105,3 +105,19 @@ td {
         font-size: 34px;
     }
 }
+
+@media (max-width: 500px) {
+    .vertical {
+        font-size: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+}
