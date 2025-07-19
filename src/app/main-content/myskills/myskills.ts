@@ -51,7 +51,6 @@ export class Myskills {
     const tooltipPortal = new ComponentPortal(OverlayContent, this.viewContainerRef);
     const tooltipRef = this.overlayRef.attach(tooltipPortal);
 
-    // Mausverhalten berücksichtigen (optional erweitern)
     const overlayElement = this.overlayRef.overlayElement;
     overlayElement.addEventListener('mouseleave', () => this.hideTooltip());
     overlayElement.addEventListener('mouseenter', () => clearTimeout(this.hideTimeout));

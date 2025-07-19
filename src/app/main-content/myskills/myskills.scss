@@ -8,10 +8,6 @@ section {
     gap: 80px;
     margin: 50px 0;
     margin-left: 100px;
-
-    >div {
-        display: flex;
-    }
 }
 
 p {
@@ -22,11 +18,6 @@ h2 {
     color: white;
     margin-top: 24px;
     margin-bottom: 16px;
-}
-
-td {
-    padding-right: 40px;
-    padding-bottom: 40px;
 }
 
 .filter-color {
@@ -55,11 +46,22 @@ td {
     justify-content: flex-start;
 }
 
+.skills-info-container-mobile {
+    display: none;
+}
+
 .skills-info-container-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 100px;;
+    margin-right: 100px;
+}
+
+.skills-info-container-subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 100px;
 }
 
 .header {
@@ -89,7 +91,7 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     width: 88px;
 
@@ -98,5 +100,83 @@ td {
         font-weight: 700;
         color: white;
         text-align: center;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1300px) {
+    .skills-grid {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    section {
+        flex-direction: column;
+    }
+
+    .skills-info-container-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-info-container {
+        > .header {
+            display: none;
+        }
+
+        > .skills-info-container-content {
+            display: none;
+        }
+    }
+
+    .skills-grid {
+        gap: 40px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        margin-left: 25px;
+    }
+
+    .skills-info-container-content {
+        margin-right: 25px;
+    }
+
+    .skills-info-container-subheader {
+        margin-right: 25px;
+
+        > div {
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: 700px) {    
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {   
+    section {
+        gap: 40px;
+    } 
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {    
+    .skills-grid {
+        gap: 8px;
     }
 }
