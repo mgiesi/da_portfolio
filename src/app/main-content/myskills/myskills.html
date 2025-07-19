@@ -4,7 +4,7 @@
             <h1>{{'skills.myskills' | translate}}</h1>
             <div class="line"></div>
         </div>
-        <div #target class="skills-info-container-content">
+        <div class="skills-info-container-content">
             <p>
                 {{ 'skills.intro1' | translate }}<br><br>
                 {{ 'skills.intro2' | translate }}
@@ -25,6 +25,7 @@
             <app-skill skill="materialdesign"></app-skill>                
             <div class="continuallylearning filter-color" #target                        
                 (mouseenter)="showTooltip()"
+                (click)="showTooltip()"
                 (mouseleave)="hideTooltip()">
                 <img src="/icons/continuallylearning.svg" alt="">
                 <span>{{ 'skills.continuallylearning' | translate}}</span>
@@ -36,7 +37,7 @@
             <h1>{{'skills.myskills' | translate}}</h1>
             <div class="line"></div>
         </div>
-        <div #target class="skills-info-container-content">
+        <div class="skills-info-container-content">
             <p>
                 {{ 'skills.intro1' | translate }}<br><br>
                 {{ 'skills.intro2' | translate }}

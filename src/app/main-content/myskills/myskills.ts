@@ -2,8 +2,6 @@ import { Component, ElementRef, ViewChild, ViewContainerRef } from '@angular/cor
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Skill } from './components/skill/skill';
 import {
-  CdkOverlayOrigin,
-  CdkConnectedOverlay,
   OverlayModule,
   OverlayRef,
   OverlayPositionBuilder,
@@ -54,6 +52,7 @@ export class Myskills {
     const overlayElement = this.overlayRef.overlayElement;
     overlayElement.addEventListener('mouseleave', () => this.hideTooltip());
     overlayElement.addEventListener('mouseenter', () => clearTimeout(this.hideTimeout));
+    overlayElement.addEventListener('click', () => this.hideTooltip());
   }
 
   private hideTimeout: any;
@@ -64,6 +63,6 @@ export class Myskills {
         this.overlayRef.dispose();
         this.overlayRef = null;
       }
-    }, 200);
+    }, 200); 
   }
 }
