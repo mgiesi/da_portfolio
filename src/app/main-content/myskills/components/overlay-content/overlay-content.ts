@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-overlay',
+  selector: 'app-overlay-content',
   imports: [TranslateModule],
-  templateUrl: './overlay.html',
-  styleUrl: './overlay.scss'
+  templateUrl: './overlay-content.html',
+  styleUrl: './overlay-content.scss'
 })
-export class Overlay {
-
+export class OverlayContent {
   constructor(private translate: TranslateService) {
   }
 }

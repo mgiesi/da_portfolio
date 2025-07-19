@@ -16,12 +16,14 @@
             <tr>
                 <td><app-skill skill="scrum"></app-skill></td>
                 <td><app-skill skill="materialdesign"></app-skill></td>
-                <td><app-skill class="filter-color" skill="continuallylearning"
-                    #trigger="cdkOverlayOrigin"
-                    cdkOverlayOrigin
-                    (mouseenter)="openOverlay()"
-                    (mouseleave)="closeOverlay()"></app-skill></td>
-                <td></td>
+                <td>
+                    <div class="continuallylearning filter-color" #target                        
+                        (mouseenter)="showTooltip()"
+                        (mouseleave)="hideTooltip()">
+                        <img src="/icons/continuallylearning.svg" alt="">
+                        <span>{{ 'skills.continuallylearning' | translate}}</span>
+                    </div>
+                </td>
             </tr>
         </table>
     </div>
@@ -30,25 +32,14 @@
             <h1>{{'skills.myskills' | translate}}</h1>
             <div class="line"></div>
         </div>
-        <p>Show that you have used a variety of  front-end technologies in your projects.</p>
-        <h2>Looking for <span>another skill</span>?</h2>
-        <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
-        <div class="btn btn-style1">Get in touch</div>
+        <div #target class="skills-info-container-content">
+            <p>
+                {{ 'skills.intro1' | translate }}<br><br>
+                {{ 'skills.intro2' | translate }}
+            </p>
+            <h2 [innerHTML]="'skills.subheader' | translate"></h2>
+            <p>{{ 'skills.subheadertext' | translate }}</p>
+            <div class="btn btn-style1">{{ 'skills.getintouch' | translate }}</div>
+        </div>
     </div>
-    <ng-template
-        cdk-connected-overlay
-        [cdkConnectedOverlayOrigin]="trigger"
-        [cdkConnectedOverlayOpen]="showOverlay"
-        [cdkConnectedOverlayHasBackdrop]="true"
-        (backdropClick)="showOverlay = false"
-        [cdkConnectedOverlayPositions]="[{
-            originX: 'start', originY: 'top',
-            overlayX: 'start', overlayY: 'bottom',
-            offsetY: -400
-        }]">
-        <app-overlay class="overlay"
-        
-    (mouseenter)="openOverlay()"
-    (mouseleave)="closeOverlay()"></app-overlay>
-    </ng-template>
 </section>

@@ -4,9 +4,10 @@
 
 section {
     display: flex;
+    justify-content: space-between;
+    gap: 80px;
     margin: 50px 0;
     margin-left: 100px;
-    margin-right: 70px;
 
     >div {
         display: flex;
@@ -15,10 +16,6 @@ section {
 
 p {
     color: white;
-}
-
-h1 {
-    margin-bottom: 40px;
 }
 
 h2 {
@@ -30,10 +27,6 @@ h2 {
 td {
     padding-right: 40px;
     padding-bottom: 40px;
-}
-
-span {
-    color: $color_primary2;
 }
 
 .filter-color {
@@ -48,8 +41,7 @@ span {
 .line {
     height: 4px;
     background-color: $color_primary2;
-    width: 20%;
-    min-width: 100px;
+    flex-grow: 1;
 }
 
 .skills-container {
@@ -60,12 +52,27 @@ span {
 .skills-info-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+.skills-info-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 100px;;
 }
 
 .header {
     display: flex;
     align-items: center;
+    margin-top: -36px;
+    margin-bottom: 40px;
+    width: 100%;
+    gap: 1rem;
+
+    > h1 {
+        white-space: nowrap;
+    }
 }
 
 .btn {
@@ -76,4 +83,20 @@ span {
 
 .overlay {
     position: absolute;
+}
+
+.continuallylearning  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 88px;
+
+    > span {
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
 }
