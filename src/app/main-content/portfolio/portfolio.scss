@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    margin-left: 100px;
+}
+
+p {
+    color: white;
+}
+
+.line {
+    height: 4px;
+    background-color: $color_primary2;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 300px;
+    width: 100%;
+    gap: 1rem;
+
+    > h1 {
+        white-space: nowrap;
+    }
+
+    > .line:first-child {
+        width: 180px;
+    }
+
+    > .line:last-child {        
+        flex-grow: 1;
+    }
+    
+}

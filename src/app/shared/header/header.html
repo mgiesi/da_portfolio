@@ -4,7 +4,7 @@
         <nav>
             <a class="" [routerLink]="[]" fragment="aboutme">{{'header.aboutme'  | translate }}</a>
             <a class="" [routerLink]="[]" fragment="skills">{{'header.skills'  | translate }}</a>
-            <a class="" href=".">{{'header.portfolio'  | translate }}</a>
+            <a class="" [routerLink]="[]" fragment="portfolio">{{'header.portfolio'  | translate }}</a>
         </nav>
         <div>
             <a (click)="switchLanguage('de')" [class.selected]="currentLang === 'de'" class="btn-style3">DE</a>
@@ -21,7 +21,7 @@
             <nav>
                 <a (click)="toggleMenu()" class="btn-style4" [routerLink]="[]" fragment="aboutme">{{'header.aboutme'  | translate }}</a>
                 <a (click)="toggleMenu()" class="btn-style4" [routerLink]="[]" fragment="skills">{{'header.skills'  | translate }}</a>
-                <a (click)="toggleMenu()" class="btn-style4" href=".">{{'header.portfolio'  | translate }}</a>
+                <a (click)="toggleMenu()" class="btn-style4" [routerLink]="[]" fragment="portfolio">{{'header.portfolio'  | translate }}</a>
             </nav>
             <div class="lang">
                 <a (click)="switchLanguage('de')" [class.selected]="currentLang === 'de'" class="btn-style4">DE</a>

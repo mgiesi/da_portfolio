@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Hero } from './hero/hero';
 import { Aboutme } from './aboutme/aboutme';
 import { Myskills } from "./myskills/myskills";
+import { Portfolio } from './portfolio/portfolio';
 
 @Component({
   selector: 'app-main-content',
-  imports: [Hero, Aboutme, Myskills],
+  imports: [Hero, Aboutme, Myskills, Portfolio],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss'
 })

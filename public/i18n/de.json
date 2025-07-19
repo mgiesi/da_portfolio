@@ -44,5 +44,7 @@
     "skills.scrum": "Scrum",
     "skills.typescript": "TypeScript",
     "skills.vuejs": "Vue.js",
-    "skills.wordpress": "WordPress"
+    "skills.wordpress": "WordPress",
+
+    "portfolio.intro": "Hier findest du eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
 }
