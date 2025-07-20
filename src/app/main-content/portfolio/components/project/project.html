@@ -1,16 +1,16 @@
-<div class="project-container">
+<div class="project-container" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
     <img src="/img/project_{{project}}.png" alt="">
-    <div class="project-info-box">
+    <div class="project-info-box" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
         <h2>{{ 'projects.' + project | translate }}</h2>
         <div>
-            <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
+            <h3>{{ skills.join(' | ') }}</h3>
         </div>
-        <p>
+        <p [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
             {{ 'projects.' + project + '.description' | translate }}
         </p>
-        <div>
-            <a><div>Live test</div></a>
-            <a><div>Github</div></a>
+        <div class="project-btns" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
+            <a><div class="btn btn-style5">Live test</div></a>
+            <a><div class="btn btn-style2">Github</div></a>
         </div>
     </div>
 </div>
