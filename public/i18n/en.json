@@ -46,5 +46,12 @@
     "skills.vuejs": "Vue.js",
     "skills.wordpress": "WordPress",
 
-    "portfolio.intro": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    "portfolio.intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+
+    "projects.join": "Join",
+    "projects.join.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "projects.elpolloloco": "El Pollo Loco",
+    "projects.elpolloloco.description": "A simple Jump-and-Run game based on an object-oriented approach. Help José to find coins and poison bottles to fight against the killer chickens.",
+    "projects.pokedex": "Pokédex",
+    "projects.pokedex.description": "A web application that retrieves Pokémon data from the PokéAPI. Search Pokémon by types, levels and abilities."
 }

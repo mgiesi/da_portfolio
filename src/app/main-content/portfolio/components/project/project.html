@@ -1,1 +1,16 @@
-<p>project works!</p>
+<div class="project-container">
+    <img src="/img/project_{{project}}.png" alt="">
+    <div class="project-info-box">
+        <h2>{{ 'projects.' + project | translate }}</h2>
+        <div>
+            <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
+        </div>
+        <p>
+            {{ 'projects.' + project + '.description' | translate }}
+        </p>
+        <div>
+            <a><div>Live test</div></a>
+            <a><div>Github</div></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+h2 {
+    color: $color_primary2;
+}
+
+h3 {
+    color: $color_primary1;
+}
+
+.project-container {
+    display: flex;
+    gap: 8opx;
+}
