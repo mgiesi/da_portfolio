@@ -53,5 +53,13 @@
     "projects.elpolloloco": "El Pollo Loco",
     "projects.elpolloloco.description": "A simple Jump-and-Run game based on an object-oriented approach. Help José to find coins and poison bottles to fight against the killer chickens.",
     "projects.pokedex": "Pokédex",
-    "projects.pokedex.description": "A web application that retrieves Pokémon data from the PokéAPI. Search Pokémon by types, levels and abilities."
+    "projects.pokedex.description": "A web application that retrieves Pokémon data from the PokéAPI. Search Pokémon by types, levels and abilities.",
+
+    "contact.contact": "Contact",
+    "contact.title": "Got a problem to solve?",
+    "contact.intro": "Let’s talk about how I can contribute. I bring structure, clarity, and a collaborative mindset to every team I join – delivering solutions that last and add real value to your product.",
+    "contact.name": "Your name",
+    "contact.email": "Your email address",
+    "contact.message": "Your message",
+    "contact.send": "Send Message"
 }

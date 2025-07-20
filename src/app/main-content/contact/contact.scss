@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'containers';
+@import 'components';
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+p {
+    color: white;
+    margin-top: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    > div {
+        width: 100%;
+    }
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+button {
+    align-self: center;
+    padding: 15px 30px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.line {
+    height: 4px;
+    background-color: $color_primary2;
+    width: 500px;
+}
+
+.content {
+    display: grid;
+    gap: 150px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 100px;
+}

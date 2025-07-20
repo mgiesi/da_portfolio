@@ -46,7 +46,7 @@
         <div class="skills-info-container-subheader">
             <h2 [innerHTML]="'skills.subheader' | translate"></h2>
             <p>{{ 'skills.subheadertext' | translate }}</p>
-            <div class="btn btn-style1">{{ 'skills.getintouch' | translate }}</div>
+            <div class="btn btn-style1" [routerLink]="[]" fragment="contact">{{ 'skills.getintouch' | translate }}</div>
         </div>
     </div>
 </section>

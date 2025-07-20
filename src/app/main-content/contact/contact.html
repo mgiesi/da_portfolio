@@ -1,0 +1,33 @@
+<section id="contact">
+    <div class="header">
+        <div class="line"></div>
+        <h1>{{'contact.contact' | translate}}</h1>
+    </div>
+    <div class="content">
+        <div>
+            <h2>{{ 'contact.title' | translate }}</h2>
+            <p>{{ 'contact.intro' | translate }}</p>
+        </div>
+        <div>
+            <form >
+                <div>
+                    <input type="text" placeholder="{{ 'contact.name' | translate }}" required>
+                    <span id="error_name" class="error"></span>
+                </div>
+                <div>
+                    <input type="email" placeholder="{{ 'contact.email' | translate }}" required>
+                    <span id="error_email" class="error"></span>
+                </div>
+                <div>
+                    <textarea placeholder="{{ 'contact.message' | translate }}" required></textarea>
+                    <span id="error_message" class="error"></span>
+                </div>
+                <div>
+                    <input type="checkbox" id="privacy" required>
+                    <span id="error_privacy" class="error"></span>
+                </div>
+                <button class="btn-style1" type="submit">{{ 'contact.send' | translate }}</button>
+            </form>
+        </div>
+    </div>
+</section>
