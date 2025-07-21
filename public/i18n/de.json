@@ -61,5 +61,10 @@
     "contact.name": "Dein Name",
     "contact.email": "Deine E-Mail-Adresse",
     "contact.message": "Deine Nachricht",
-    "contact.send": "Nachricht senden"
+    "contact.privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+    "contact.send": "Nachricht senden",
+    "contact.error.name": "Dein Name ist erforderlich",
+    "contact.error.email": "Deine E-Mail-Adresse ist erforderlich",
+    "contact.error.message": "Deine Nachricht ist erforderlich",
+    "contact.error.privacy": "Bitte stimme den Datenschutzbestimmungen zu"
 }
