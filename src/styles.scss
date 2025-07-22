@@ -29,6 +29,18 @@ h2 {
 h3 {
   font-size: 23px;
   font-weight: 400;
+  color: white;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+li {
+  color: white;
+  margin-left: 40px;
 }
 
 a {
@@ -37,6 +49,12 @@ a {
 
 .text-highlight {
     color: $color_primary2;
+}
+
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* poppins-100 - latin */

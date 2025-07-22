@@ -61,7 +61,7 @@
     "contact.name": "Your name",
     "contact.email": "Your email address",
     "contact.message": "Your message",
-    "contact.privacy": "I've read the privacy policy and agree to the processing of my data as outlined.",
+    "contact.privacy": "I've read the <a href='privacy'><span class='text-highlight link'>privacy policy</span></a> and agree to the processing of my data as outlined.",
     "contact.send": "Send Message",
     "contact.error.name": "Your name is required",
     "contact.error.email": "Your email address is required",

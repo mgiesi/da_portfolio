@@ -72,7 +72,7 @@
                     <label class="custom-checkbox">
                         <input name="contactPrivacy" type="checkbox" ngModel #contactPrivacy="ngModel" required>
                         <span class="checkbox-img"></span>
-                        <span class="checkbox-text">{{ 'contact.privacy' | translate }}</span>
+                        <span class="checkbox-text" [innerHTML]="'contact.privacy' | translate"></span>
                     </label>
                     <span class="error" *ngIf="contactPrivacy.invalid && (contactPrivacy.touched || contactPrivacy.dirty)">{{ 'contact.error.privacy' | translate }}</span>
                 </div>

@@ -11,3 +11,9 @@
 .page-container {
     margin: 50px 100px;
 }
+
+@media (max-width: 900px) {    
+    .page-container {
+        margin: 50px 25px;  
+    }
+}
