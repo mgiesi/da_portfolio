@@ -2,6 +2,11 @@
 @import 'containers';
 @import 'components';
 
+section {
+    display: flex;
+    
+}
+
 h4 {
     color: white;
 }

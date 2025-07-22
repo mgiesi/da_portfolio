@@ -32,10 +32,6 @@ textarea {
     resize: vertical;
 }
 
-.input-field-wrapper:hover .textarea-resize-handle {
-  content: url('/icons/textarea-drag-valid.svg');
-}
-
 .input-field-wrapper {
     display: flex;
     position: relative;
@@ -51,8 +47,8 @@ textarea {
     .input-field-img {
         position: absolute;
         right: 25px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 15px;
+        z-index: 3;
         pointer-events: none;
 
         &.valid {
@@ -63,62 +59,84 @@ textarea {
             content: url('/icons/invalid.svg');
         }
     }
-}
 
-.resize-overlay {
-    position: absolute;
-    right: 0px !important;
-    bottom: 0px !important;
-    border-right: 1px solid $color_primary2;
-    border-bottom: 1px solid $color_primary2;
-    border-bottom-right-radius: 10px;
-    background-color: $color_bg;
-    border-color: $color_primary2;
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    pointer-events: none;
-
-    &:hover {
+    &:hover .resize-overlay {
         border-color: $color_primary1;
     }
 
-    &.valid {
-        border-color: $color_primary1;
+    .resize-overlay {
+        position: absolute;
+        right: 0px !important;
+        bottom: 0px !important;
+        border-right: 1px solid $color_primary2;
+        border-bottom: 1px solid $color_primary2;
+        border-bottom-right-radius: 10px;
+        background-color: $color_bg;
+        border-color: $color_primary2;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        pointer-events: none;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+            border-color: $color_primary1;
+        }
+
+        &.valid {
+            border-color: $color_primary1;
+        }
+
+        &.invalid {
+            border-color: $color_error;
+        }
     }
 
-    &.invalid {
-        border-color: $color_error;
-    }
-}
-
-.textarea-resize-handle {
-    position: absolute;
-    top: unset !important;
-    right: 5px !important;
-    bottom: 5px !important;
-    pointer-events: none;
-    z-index: 3;
-    
-    &.valid {
+    &:hover .textarea-resize-handle {
         content: url('/icons/textarea-drag-valid.svg');
     }
+    
+    .textarea-resize-handle {
+        position: absolute;
+        top: unset !important;
+        right: 5px !important;
+        bottom: 5px !important;
+        pointer-events: none;
+        z-index: 3;
+        transition: all 0.3s ease;
+        
+        &.valid {
+            content: url('/icons/textarea-drag-valid.svg');
+        }
 
-    &.invalid {
-        content: url('/icons/textarea-drag-invalid.svg');
+        &.invalid {
+            content: url('/icons/textarea-drag-invalid.svg');
+        }
     }
 }
 
 .input-field {   
     color: white;
-    background-color: $color_bg;
+    background-color: $color_bg !important;
     border-radius: 10px;
     padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 400;
     flex-grow: 1;
     outline: none;
     cursor: pointer;
     border: 1px solid $color_primary2;
     transition: border-color 0.3s ease;
+
+    &:-webkit-autofill {
+        background-color: $color_bg !important;
+        color: white !important;        
+        font-size: 16px !important;
+        font-family: 'Poppins', sans-serif !important;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: white !important;
+        caret-color: white;
+    }
 
     &::placeholder {
         color: white;
@@ -153,6 +171,7 @@ textarea {
         background-size: contain;
         background-repeat: no-repeat;
         transition: background-image 0.3s ease;
+        flex-shrink: 0
     }
 
     &:hover input:not(:checked) + .checkbox-img {
@@ -169,10 +188,11 @@ textarea {
 
     > .checkbox-text {
         color: white;
-        margin-left: 10px;
+        margin-left: 0px;
         user-select: none;
         font-size: 14px;
-        font-weight: 400;;
+        font-weight: 400;
+        margin-left: 10px;
     }
 }
 
@@ -201,6 +221,7 @@ button {
     align-items: center;
     gap: 20px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .line {
@@ -220,4 +241,88 @@ button {
     color: $color-error;
     font-size: 14px;
     font-weight: 400;
+}
+
+.gototop {
+    border-radius: 50%;
+    color: white;
+    border: 2px solid white;
+    width: 39px;
+    height: 39px;
+    align-self: flex-end;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+        border-color: $color_primary1;
+        color: $color_primary1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .line {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .line {
+        width: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    
+    .line {
+        width: 200px;
+    }
+
+    .content {
+        margin: 0 25px;  
+        grid-template-columns: repeat(1, 1fr);     
+        gap: 50px; 
+    }
+
+    .gototop {
+        margin-right: 25px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .line {
+        width: 40px;
+    }
+
+    .content {
+        gap: 25px;     
+    }
+}
+
+
+@media (max-width: 1280px) {
+    button {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 1180px) {
+    button {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1080px) {
+    button {
+        font-size: 16px;
+    }
 }

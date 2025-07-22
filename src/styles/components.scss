@@ -10,7 +10,7 @@
         transform: scale(1.2);
     }
     
-    &:active {
+    &:Not(:disabled):active {
         background-color: white;
         color: black;
     }

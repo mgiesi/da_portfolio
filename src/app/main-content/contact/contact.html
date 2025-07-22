@@ -60,7 +60,11 @@
                                         'valid': contactMessage.valid && (contactMessage.touched || contactMessage.dirty),
                                         'invalid': contactMessage.invalid && (contactMessage.touched || contactMessage.dirty)
                                 }"/>
-                        <div class="resize-overlay"></div>
+                        <div class="resize-overlay"
+                            [ngClass]="{
+                                        'valid': contactMessage.valid && (contactMessage.touched || contactMessage.dirty),
+                                        'invalid': contactMessage.invalid && (contactMessage.touched || contactMessage.dirty)
+                                }"></div>
                     </div>
                     <span class="error" *ngIf="contactMessage.invalid && (contactMessage.touched || contactMessage.dirty)">{{ 'contact.error.message' | translate }}</span>
                 </div>
@@ -76,4 +80,5 @@
             </form>
         </div>
     </div>
+    <a class="gototop" [routerLink]="[]" fragment="hero"><span>🡑</span></a>
 </section>
