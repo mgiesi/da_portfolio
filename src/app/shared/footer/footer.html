@@ -1,7 +1,7 @@
 <footer class="content-container">
     <div class="footer-content-1">
         <a href="/"><img class="logo" src="/icons/logo.svg" alt="{{'header.alt.logo' | translate }}"></a>
-        <a href="legalnotice" class="desktop-only">{{'footer.legalnotice' | translate }}<div class="line"></div></a>
+        <a [routerLink]="['/legalnotice']" class="desktop-only">{{'footer.legalnotice' | translate }}<div class="line"></div></a>
     </div>
     <div>
         <span>&copy; Markus Giesinger 2025</span>
@@ -11,5 +11,5 @@
         <a href="/"><img class="link" src="/icons/contact.svg" alt="{{'footer.alt.contact' | translate }}"></a>
         <a href="https://linkedin.com/markus.giesinger" target="_blank"><img class="link" src="/icons/linkedin.svg" alt="{{'footer.alt.linkedin' | translate }}"></a>
     </div>
-    <a class="mobile-only" href="legalnotice">{{'footer.legalnotice' | translate }}</a>
+    <a class="mobile-only" [routerLink]="['/legalnotice']">{{'footer.legalnotice' | translate }}</a>
 </footer>

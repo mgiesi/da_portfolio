@@ -20,7 +20,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-            "localize": ["en-US"],
+            "localize": false,
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
