@@ -1,12 +1,14 @@
+@use 'variables';
+
 .btn-style1 {
     border-radius: 10px;
-    background-color: $color_primary1;
+    background-color: variables.$color_primary1;
     color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
     &:not(:disabled):hover {
-        background-color: $color_primary2;
+        background-color: variables.$color_primary2;
         transform: scale(1.2);
     }
     
@@ -16,40 +18,40 @@
     }
 
     &:disabled {
-        background-color: $color_disabled;
+        background-color: variables.$color_disabled;
         cursor: not-allowed;
     }
 }
 
 .btn-style2 {
     border-radius: 10px;
-    border: 1px solid $color_primary1;
+    border: 1px solid variables.$color_primary1;
     color: white;
     cursor: pointer;
     
     &:hover {
-        background-color: $color_primary1;
+        background-color: variables.$color_primary1;
     }
 }
 
 .btn-style3 {
     border-radius: 10px;
-    border: 1px solid $color_primary1;
+    border: 1px solid variables.$color_primary1;
     color: white;
     cursor: pointer;
     
     &:hover {
-        background-color: $color_primary2;
+        background-color: variables.$color_primary2;
     }
 
     &:active {
         background-color: white;
-        color: $color_primary2;
+        color: variables.$color_primary2;
     }
 
     &.selected {
         color: white;
-        background-color: $color_primary1;
+        background-color: variables.$color_primary1;
     }
 }
 
@@ -57,33 +59,33 @@
     color: white;
     
     &:hover {
-        color: $color_primary2;
+        color: variables.$color_primary2;
     }
 
     &:active {
-        color: $color_primary2;
+        color: variables.$color_primary2;
         font-weight: 600;
     }
 
     &.selected {
-        color: $color_primary1;
+        color: variables.$color_primary1;
         font-weight: 600;
     }
 }
 
 .btn-style5 {
     border-radius: 10px;
-    background-color: $color_primary2;
+    background-color: variables.$color_primary2;
     color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        background-color: $color_primary1;
+        background-color: variables.$color_primary1;
     }
     
     &:active {
         background-color: white;
-        color: $color_primary1;
+        color: variables.$color_primary1;
     }
 }

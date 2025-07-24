@@ -1,6 +1,18 @@
-@import 'variables';
-@import 'containers';
-@import 'components';
+@use 'index' as *;
+
+%focus-border {
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $color_primary1;
+  }
+  &.valid {
+    border-color: $color_primary1;
+  }
+  &.invalid {
+    border-color: $color_error;
+  }
+}
 
 section {
     display: flex;
@@ -21,7 +33,6 @@ form {
     gap: 32px;
 
     > div {
-        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -35,7 +46,6 @@ textarea {
 .input-field-wrapper {
     display: flex;
     position: relative;
-    width: 100%;
 
     .input-field {
         resize: vertical;
@@ -58,42 +68,6 @@ textarea {
             content: url('/icons/invalid.svg');
         }
     }
-
-    &:hover .resize-overlay {
-        border-color: $color_primary1;
-    }
-
-    .resize-overlay {
-        position: absolute;
-        right: 0px !important;
-        bottom: 0px !important;
-        border-right: 1px solid $color_primary2;
-        border-bottom: 1px solid $color_primary2;
-        border-bottom-right-radius: 10px;
-        background-color: $color_bg;
-        border-color: $color_primary2;
-        z-index: 2;
-        width: 40px;
-        height: 40px;
-        pointer-events: none;
-        transition: border-color 0.3s ease;
-
-        &:hover {
-            border-color: $color_primary1;
-        }
-
-        &.valid {
-            border-color: $color_primary1;
-        }
-
-        &.invalid {
-            border-color: $color_error;
-        }
-    }
-
-    &:hover .textarea-resize-handle {
-        content: url('/icons/textarea-drag-valid.svg');
-    }
     
     .textarea-resize-handle {
         position: absolute;
@@ -114,7 +88,32 @@ textarea {
     }
 }
 
-.input-field {   
+.input-field-wrapper:hover .resize-overlay:not(.invalid) {
+    border-color: $color_primary1;
+}
+
+.input-field-wrapper .resize-overlay {
+    @extend %focus-border;
+    position: absolute;
+    right: 0px !important;
+    bottom: 0px !important;
+    border-right: 1px solid $color_primary2;
+    border-bottom: 1px solid $color_primary2;
+    border-bottom-right-radius: 10px;
+    background-color: $color_bg;
+    border-color: $color_primary2;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+
+.input-field-wrapper:hover .textarea-resize-handle:not(.invalid) {
+    content: url('/icons/textarea-drag-valid.svg');
+}
+
+.input-field-wrapper .input-field { 
+    @extend %focus-border;  
     color: white;
     background-color: $color_bg !important;
     border-radius: 10px;
@@ -125,7 +124,6 @@ textarea {
     outline: none;
     cursor: pointer;
     border: 1px solid $color_primary2;
-    transition: border-color 0.3s ease;
 
     &:-webkit-autofill {
         background-color: $color_bg !important;
@@ -139,18 +137,6 @@ textarea {
 
     &::placeholder {
         color: white;
-    }
-
-    &:hover {
-        border-color: $color_primary1;
-    }
-
-    &.valid {
-        border-color: $color_primary1;
-    }
-
-    &.invalid {
-        border-color: $color_error;
     }
 }
 
@@ -187,7 +173,6 @@ textarea {
 
     > .checkbox-text {
         color: white;
-        margin-left: 0px;
         user-select: none;
         font-size: 14px;
         font-weight: 400;
@@ -249,9 +234,7 @@ button {
     width: 39px;
     height: 39px;
     align-self: flex-end;
-    margin-top: 50px;
-    margin-right: 100px;
-    margin-bottom: 90px;
+    margin: 50px 100px 90px;
     text-align: center;
     font-size: 30px;
     cursor: pointer;
@@ -291,8 +274,7 @@ button {
     }
 
     .gototop {
-        margin-right: 25px;
-        margin-bottom: 0px;
+        margin: 0 25px 0 0;
     }
 }
 

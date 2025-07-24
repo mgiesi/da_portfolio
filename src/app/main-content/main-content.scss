@@ -1,6 +1,4 @@
-@import 'variables';
-@import 'containers';
-@import 'components';
+@use 'index' as *;
 
 .content {
     max-width: $max_container_width;

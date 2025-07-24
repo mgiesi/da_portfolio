@@ -9,8 +9,8 @@
             {{ 'projects.' + project + '.description' | translate }}
         </p>
         <div class="project-btns" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
-            <a><div class="btn btn-style5">Live test</div></a>
-            <a><div class="btn btn-style2">Github</div></a>
+            <a href="/apps/da_{{project}}" target="_blank"><div class="btn btn-style5">{{ 'projects.livetest' | translate }}</div></a>
+            <a href="https://github.com/mgiesi/da_{{project}}" target="_blank"><div class="btn btn-style2">{{ 'projects.github' | translate }}</div></a>
         </div>
     </div>
 </div>

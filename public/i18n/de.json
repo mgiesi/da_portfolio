@@ -48,6 +48,8 @@
 
     "portfolio.intro": "Hier findest du eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
 
+    "projects.github": "GitHub",
+    "projects.livetest": "Live Test",
     "projects.join": "Join",
     "projects.join.description": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
     "projects.elpolloloco": "El Pollo Loco",

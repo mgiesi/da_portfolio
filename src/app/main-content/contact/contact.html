@@ -9,7 +9,7 @@
             <p>{{ 'contact.intro' | translate }}</p>
         </div>
         <div>
-            <form #myForm="ngForm">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
                 <div>
                     <div class="input-field-wrapper">
                         <input name="contactName" class="input-field" type="text" ngModel #contactName="ngModel" placeholder="{{ 'contact.name' | translate }}" required
@@ -80,5 +80,5 @@
             </form>
         </div>
     </div>
-    <a class="gototop" [routerLink]="[]" fragment="hero"><span>🡑</span></a>
+    <a class="gototop" [routerLink]="[]" fragment="hero"><span>↑</span></a>
 </section>

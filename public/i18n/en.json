@@ -48,6 +48,8 @@
 
     "portfolio.intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
 
+    "projects.github": "GitHub",
+    "projects.livetest": "Live test",
     "projects.join": "Join",
     "projects.join.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "projects.elpolloloco": "El Pollo Loco",

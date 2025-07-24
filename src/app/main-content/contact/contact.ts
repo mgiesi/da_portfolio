@@ -1,8 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -11,12 +12,53 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.scss'
 })
 export class Contact {
+  
+  http = inject(HttpClient);
+
+  mailTest = false;
+
+  post = {
+    endPoint: 'https://portfolio.mgiesi.at/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   constructor(private translate: TranslateService) {
   }
 
   markAsTouched(input: any) {
     if (!input.touched) {
       input.control.markAsTouched();
+    }
+  }
+
+  onSubmit(form: NgForm) {
+    let contactData = {
+      "name": form.value.contactName,
+      "email": form.value.contactEmail,
+      "message": form.value.contactMessage
+    }
+    
+    if (form.submitted && form.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(contactData))
+        .subscribe({
+          next: (response) => {
+
+            form.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (form.submitted && form.form.valid && this.mailTest) {
+
+      form.resetForm();
     }
   }
 }

@@ -1,5 +1,4 @@
-@import './styles/variables';
-@import './styles/components';
+@use 'index' as *;
 
 *  {
     scroll-behavior: smooth;
@@ -7,6 +6,7 @@
     
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .content-container {
