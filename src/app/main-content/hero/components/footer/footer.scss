@@ -1,5 +1,9 @@
 @use 'index' as *;
 
+span {
+    cursor: pointer;
+}
+
 .content {
     display: flex;
     align-items: center;
