@@ -73,15 +73,17 @@ img {
 }
 
 .img5 {
-    top: 4221px;
-    left: 12px;
+    top: 3421px;
+    left: -520px;
     width: 671px;
+    transform: scale(2.0);
 }
 
 .img6 {
-    top: 6221px;
-    left: 12px;
+    top: 4321px;
+    right: -500px;
     width: 671px;
+    transform: scaleX(-2);
 }
 
 @media (max-width: 900px) {
