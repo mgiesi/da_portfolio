@@ -1,7 +1,7 @@
 @use 'index' as *;
 
 %focus-border {
-  transition: border-color 0.3s ease;
+  transition: border-color 125ms ease;
 
   &:hover {
     border-color: $color_primary1;
@@ -76,7 +76,7 @@ textarea {
         bottom: 5px !important;
         pointer-events: none;
         z-index: 3;
-        transition: all 0.3s ease;
+        transition: all 125ms ease;
         
         &.valid {
             content: url('/icons/textarea-drag-valid.svg');
@@ -155,7 +155,7 @@ textarea {
         background: url('/icons/check.svg');
         background-size: contain;
         background-repeat: no-repeat;
-        transition: background-image 0.3s ease;
+        transition: background-image 125ms ease;
         flex-shrink: 0
     }
 
@@ -238,7 +238,7 @@ button {
     text-align: center;
     font-size: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 125ms ease;
     display: flex;
     align-items: center;
     justify-content: center;

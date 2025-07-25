@@ -21,7 +21,7 @@ td {
     white-space: nowrap;
     padding-top: 20px;
     padding-bottom: 28px;
-    transition: all 0.2s ease-in-out;
+    transition: all 125ms ease-in-out;
 }
 
 .title {
@@ -29,14 +29,14 @@ td {
     font-size: 76px;
     font-weight: 700;
     vertical-align: top;
-    transition: font-size 0.2s ease-in-out;
+    transition: font-size 125ms ease-in-out;
 }
 
 .subtitle {
     color: $color_primary2;
     font-size: 58px;
     text-transform: uppercase;
-    transition: font-size 0.2s ease-in-out;
+    transition: font-size 125ms ease-in-out;
 }
 
 

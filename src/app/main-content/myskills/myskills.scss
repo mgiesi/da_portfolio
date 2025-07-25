@@ -20,7 +20,7 @@ h2 {
 
 .filter-color {
     filter: brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(1559%) hue-rotate(254deg) brightness(93%) contrast(101%);
-    transition: filter 0.2s ease-in-out;
+    transition: filter 125ms ease-in-out;
 
     &:hover {
         filter: none;

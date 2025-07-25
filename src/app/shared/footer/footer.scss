@@ -32,7 +32,7 @@ a {
     width: 25%;
     height: 100%;
     border-bottom: 2px solid rgba(0,0,0,0);
-    transition: all 0.2s ease-in-out;
+    transition: all 125ms ease-in-out;
 }
 
 .mobile-only {
@@ -52,7 +52,7 @@ a {
 
 .link {
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 125ms ease-in-out;
 
     &:hover {
         transform: scale(1.4);
