@@ -15,7 +15,7 @@ export class Contact {
   
   http = inject(HttpClient);
 
-  mailTest = true;
+  mailTest = false;
 
   mailSended = false;
   mailSendFailed = false;
@@ -66,7 +66,6 @@ export class Contact {
           complete: () => console.info('send post complete'),
         });
     } else if (form.submitted && form.form.valid && this.mailTest) {
-
       form.resetForm();
       this.mailSended = true;
       this.mailSendFailed = false;

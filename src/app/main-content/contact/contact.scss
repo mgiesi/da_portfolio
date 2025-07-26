@@ -30,17 +30,24 @@ p {
 form {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 12px;
 
     > div {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 2px;
     }
 }
 
 textarea {
     resize: vertical;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
 }
 
 .input-field-wrapper {
@@ -222,9 +229,19 @@ button {
 }
 
 .error {
+    display: block;
     color: $color-error;
     font-size: 14px;
     font-weight: 400;
+    min-height: 1em;
+}
+
+.error.invisible {
+  visibility: hidden;
+}
+
+.error.visible {
+  visibility: visible;
 }
 
 .gototop {
