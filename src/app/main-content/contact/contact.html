@@ -9,7 +9,7 @@
             <p>{{ 'contact.intro' | translate }}</p>
         </div>
         <div>
-            <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" *ngIf="!mailSended && !mailSendFailed">
                 <div>
                     <div class="input-field-wrapper">
                         <input name="contactName" class="input-field" type="text" ngModel #contactName="ngModel" placeholder="{{ 'contact.name' | translate }}" required
@@ -75,6 +75,19 @@
                 </div>
                 <button class="btn-style1" type="submit" [disabled]="!myForm.valid">{{ 'contact.send' | translate }}</button>
             </form>
+            <div class="form-rsult" *ngIf="mailSended">
+                <img src="/icons/valid.svg">
+                <p>
+                    {{ 'contact.email.sended' | translate}}
+                </p>
+            </div>
+            <div class="form-rsult" *ngIf="mailSendFailed">                
+                <img src="/icons/invalid.svg">
+                <p>
+                    {{ 'contact.email.failed' | translate}}
+                </p>
+                <div class="btn-style2" (click)="resetFormView()">{{ 'contact.back' | translate }}</div>
+            </div>
         </div>
     </div>
     <a class="gototop" [routerLink]="[]" fragment="hero"><span>↑</span></a>

@@ -249,6 +249,23 @@ button {
     }
 }
 
+.form-rsult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    > img {
+        width: 100px;
+        height: auto;
+    }
+
+    > div {
+        padding: 15px 30px;
+    }
+}
+
 @media (max-width: 1200px) {
     .line {
         width: 400px;

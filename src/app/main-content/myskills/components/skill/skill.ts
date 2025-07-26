@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,21 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class Skill {
   @Input() skill = '';
+  
+  @ViewChild('element', { static: true }) elementRef!: ElementRef;
+  isVisible = false;
 
   constructor(private translate: TranslateService) {
+  }
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        this.isVisible = true;
+        observer.unobserve(this.elementRef.nativeElement);
+      }
+    }, { threshold: 0.1 });
+
+    observer.observe(this.elementRef.nativeElement);
   }
 }

@@ -71,5 +71,8 @@
     "contact.error.name": "Your name is required",
     "contact.error.email": "Your email address is required",
     "contact.error.message": "Your message is required",
-    "contact.error.privacy": "Please agree to the privacy policy"
+    "contact.error.privacy": "Please agree to the privacy policy",
+    "contact.email.sended": "Thank you for your message!",
+    "contact.email.failed": "An error occurred while sending your message. Please try again.",
+    "contact.back": "Back"
 }

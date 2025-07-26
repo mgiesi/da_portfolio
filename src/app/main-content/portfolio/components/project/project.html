@@ -1,5 +1,5 @@
 <div class="project-container" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
-    <img src="/img/project_{{project}}.png" alt="">
+    <img src="/img/project_{{project}}.png" alt="" [ngClass]="{'img-align-left': align === 'left', 'img-align-right': align === 'right'}" [class.animate]="isVisible" #element>
     <div class="project-info-box" [ngClass]="{'align-left': align === 'left', 'align-right': align === 'right'}">
         <h2>{{ 'projects.' + project | translate }}</h2>
         <div>

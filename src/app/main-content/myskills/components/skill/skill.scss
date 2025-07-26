@@ -7,6 +7,13 @@ div {
     justify-content: center;
     gap: 10px;
     width: 88px;
+
+    opacity: 0;
+    transition: opacity 1.0s ease-out;
+}
+
+div.animate {
+  opacity: 1;
 }
 
 img {

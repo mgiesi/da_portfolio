@@ -15,7 +15,10 @@ export class Contact {
   
   http = inject(HttpClient);
 
-  mailTest = false;
+  mailTest = true;
+
+  mailSended = false;
+  mailSendFailed = false;
 
   post = {
     endPoint: 'https://portfolio.mgiesi.at/sendMail.php',
@@ -37,6 +40,11 @@ export class Contact {
     }
   }
 
+  resetFormView() {
+    this.mailSended = false;
+    this.mailSendFailed = false;
+  }
+
   onSubmit(form: NgForm) {
     let contactData = {
       "name": form.value.contactName,
@@ -48,10 +56,11 @@ export class Contact {
       this.http.post(this.post.endPoint, this.post.body(contactData))
         .subscribe({
           next: (response) => {
-
+            this.mailSended = true;
             form.resetForm();
           },
           error: (error) => {
+            this.mailSendFailed = true;
             console.error(error);
           },
           complete: () => console.info('send post complete'),
@@ -59,6 +68,8 @@ export class Contact {
     } else if (form.submitted && form.form.valid && this.mailTest) {
 
       form.resetForm();
+      this.mailSended = true;
+      this.mailSendFailed = false;
     }
   }
 }

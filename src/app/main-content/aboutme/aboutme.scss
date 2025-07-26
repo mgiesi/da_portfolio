@@ -45,6 +45,15 @@ p  {
     display: flex;
     align-items: center;
     margin-left: 150px;
+
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 0.6s ease-out;
+}
+
+.img-box.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .img-me {

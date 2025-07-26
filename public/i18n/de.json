@@ -71,5 +71,8 @@
     "contact.error.name": "Dein Name ist erforderlich",
     "contact.error.email": "Deine E-Mail-Adresse ist erforderlich",
     "contact.error.message": "Deine Nachricht ist erforderlich",
-    "contact.error.privacy": "Bitte stimme den Datenschutzbestimmungen zu"
+    "contact.error.privacy": "Bitte stimme den Datenschutzbestimmungen zu",
+    "contact.email.sended": "Vielen Dank für deine Nachricht!",
+    "contact.email.failed": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuche es noch einmal.",
+    "contact.back": "Zurück"
 }
