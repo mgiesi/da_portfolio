@@ -1,7 +1,15 @@
 @use 'variables';
 
+.root-container {    
+  overflow-x: hidden;
+  position: relative;
+  background-color: variables.$color_bg;
+}
+
 .fullWidthContainer {
-    width: 100%;
+    max-width: variables.$max_container_width;
+    margin: 0 auto;
+    z-index: 1;
     background: black;
 }
 

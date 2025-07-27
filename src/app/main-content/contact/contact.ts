@@ -1,18 +1,20 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { SectionDivider } from '../../shared/section-divider/section-divider';
 
 @Component({
   selector: 'app-contact',
-  imports: [TranslateModule, CommonModule, FormsModule, RouterLink],
+  imports: [TranslateModule, CommonModule, FormsModule, RouterLink, SectionDivider],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
-export class Contact {
-  
+export class Contact {  
+  @ViewChild('contentContainer', { static: true }) contentContainerRef!: ElementRef;
+
   http = inject(HttpClient);
 
   mailTest = false;

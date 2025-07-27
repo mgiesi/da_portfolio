@@ -45,7 +45,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
     margin-left: 48px;
     width: 100%;
     position: relative;
@@ -63,7 +62,6 @@ span {
     height: 4px;
     background-color: $color_primary2;
     width: 100%;
-    min-width: 200px;
 }
 
 .line-author {

@@ -33,9 +33,10 @@
         </div>
     </div>
     <div class="skills-info-container">
-        <div class="header">
+        <div class="header" #contentContainer>
+            <app-section-divider align="right" color="#9747FF" [containerEl]="contentContainerRef.nativeElement"></app-section-divider>
             <h1>{{'skills.myskills' | translate}}</h1>
-            <div class="line"></div>
+            <div class="line"></div>            
         </div>
         <div class="skills-info-container-content">
             <p>

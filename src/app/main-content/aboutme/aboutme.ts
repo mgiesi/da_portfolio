@@ -1,9 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { SectionDivider } from '../../shared/section-divider/section-divider';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-aboutme',
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule, SectionDivider],
   templateUrl: './aboutme.html',
   styleUrl: './aboutme.scss'
 })

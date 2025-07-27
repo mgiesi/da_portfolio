@@ -13,7 +13,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class App {
   protected title = 'portfolio';
-
+  
   constructor(private translate: TranslateService, private viewportScroller: ViewportScroller) {
     translate.setDefaultLang('en');
     translate.use('en');

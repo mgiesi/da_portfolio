@@ -9,7 +9,8 @@
         </div>
         <img class="feedback-img" src="/icons/feedback.svg">
     </div>
-    <div class="img-box">
+    <div class="img-box" #contentContainer>
+        <app-section-divider align="right" color="#9747FF" [containerEl]="contentContainerRef.nativeElement"></app-section-divider>
         <img class="img-feedback" src="/img/feedback_{{author}}.png">
         <div class="line"></div>
     </div>

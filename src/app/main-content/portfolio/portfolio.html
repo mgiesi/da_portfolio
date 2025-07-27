@@ -1,7 +1,8 @@
 <section id="portfolio">
-    <div class="header">
+    <div class="header" #contentContainer>
         <div class="line"></div>
         <h1>{{'header.portfolio' | translate}}</h1>
+        <app-section-divider align="right" color="#9747FF" [containerEl]="contentContainerRef.nativeElement"></app-section-divider>
         <div class="line"></div>
     </div>
     <div>

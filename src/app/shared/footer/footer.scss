@@ -1,5 +1,15 @@
 @use 'index' as *;
 
+.root-content {
+    width: 100%;
+}
+
+.border-line {
+    height: 4px;
+    width: 100%;
+    background-color: $color_primary1;
+}
+
 footer {
     height: var(--footer-height);
 
@@ -8,7 +18,7 @@ footer {
     align-items: center;
 
     background-color: $color_bg;
-    border-top: 4px solid $color_primary1;
+    /* border-top: 4px solid $color_primary1; */
 }
 
 span {

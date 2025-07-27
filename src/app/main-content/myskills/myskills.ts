@@ -10,15 +10,17 @@ import {
 import { OverlayContent } from './components/overlay-content/overlay-content';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { RouterLink } from '@angular/router';
+import { SectionDivider } from '../../shared/section-divider/section-divider';
 
 @Component({
   selector: 'app-myskills',
-  imports: [TranslateModule, Skill, OverlayModule, RouterLink ],
+  imports: [TranslateModule, Skill, OverlayModule, RouterLink, SectionDivider ],
   templateUrl: './myskills.html',
   styleUrl: './myskills.scss'
 })
 export class Myskills {
   @ViewChild('target') targetRef!: ElementRef;
+  @ViewChild('contentContainer', { static: true }) contentContainerRef!: ElementRef;
 
   private overlayRef: OverlayRef | null = null;
 
