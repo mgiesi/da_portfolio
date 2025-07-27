@@ -143,6 +143,11 @@ h2 {
         flex-direction: column;
     }
 
+    .skills-container {
+        justify-content: center;
+        margin-right: 100px;
+    }
+
     .skills-info-container {
         > .header {
             display: none;
@@ -162,6 +167,10 @@ h2 {
 @media (max-width: 900px) {
     section {
         margin-left: 25px;
+    }
+
+    .skills-container {
+        margin-right: 25px;
     }
 
     .skills-info-container-content {

@@ -13,8 +13,7 @@ td {
 
 .vertical {
     color: white;
-    writing-mode: tb-rl;
-    transform: scale(-1);
+    transform: rotate(-90deg);
     text-align: justify;
     font-size: 64px;
     text-align-last: justify;

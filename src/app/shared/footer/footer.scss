@@ -1,7 +1,7 @@
 @use 'index' as *;
 
 footer {
-    height: $footer_height;
+    height: var(--footer-height);
 
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,6 @@ a {
     footer {
         flex-direction: column;
         justify-content: flex-start;
-        height: 380px;
     }
 
     .mobile-only {

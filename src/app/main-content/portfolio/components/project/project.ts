@@ -23,7 +23,8 @@ export class Project {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         this.isVisible = true;
-        observer.unobserve(this.elementRef.nativeElement);
+      } else {
+        this.isVisible = false;
       }
     }, { threshold: 0.1 });
 
