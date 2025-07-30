@@ -44,6 +44,7 @@ textarea {
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    max-height: 500px;
 }
 
 textarea::-webkit-scrollbar {
@@ -132,18 +133,29 @@ textarea::-webkit-scrollbar {
     cursor: pointer;
     border: 1px solid $color_primary2;
 
-    &:-webkit-autofill {
+    &::placeholder {
+        color: white;
+    }
+
+    &:focus {
+        color: white;
+        background-color: $color_bg;
+        -webkit-text-fill-color: white;
+    }
+
+    // Safari/Chrome Autofill: alle Zustände absichern
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
         background-color: $color_bg !important;
-        color: white !important;        
+        -webkit-box-shadow: 0 0 0px 1000px $color_bg inset !important;
+        -webkit-text-fill-color: white !important;
+        color: white !important;
+        caret-color: white;
         font-size: 16px !important;
         font-family: 'Poppins', sans-serif !important;
         transition: background-color 5000s ease-in-out 0s;
-        -webkit-text-fill-color: white !important;
-        caret-color: white;
-    }
-
-    &::placeholder {
-        color: white;
     }
 }
 
@@ -204,6 +216,7 @@ button {
     padding: 15px 30px;
     font-size: 23px;
     font-weight: 400;
+    border: none;
 }
 
 .header {

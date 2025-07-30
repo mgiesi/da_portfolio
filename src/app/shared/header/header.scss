@@ -1,16 +1,21 @@
 @use 'index' as *;
 
 header {
-    position: sticky;
-    top: 0;
-    height: var(--header-height);
-
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 
     background-color: $color_bg;
+}
+
+.root-content {
+    background-color: $color_bg;
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    z-index: 10;
 }
 
 .logo {

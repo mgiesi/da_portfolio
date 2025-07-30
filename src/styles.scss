@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+body {
+  background-color: $color_bg;
+}
+
 .content-container {
     max-width: $max_container_width;
     margin: 0 auto;
